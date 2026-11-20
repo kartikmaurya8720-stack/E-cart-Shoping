@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-cart Shoping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0%;
+            border: border-box;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #0f1111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .nav-logo {
+            height: 50px;
+            width: 100px;
+        }
+
+        .logo {
+            background-image: url(logo.jpg);
+            background-size: cover;
+            height: 50px;
+            width: 100%;
+
+        }
+
+        .border {
+            border: 2px solid transparent;
+        }
+
+        .border:hover {
+            border: 2px solid #fff;
+        }
+
+        /** Box2 **/
+        .add-first {
+            color: #cccccc;
+            font-size: 0.85rem;
+            margin-left: 15px;
+        }
+
+        .add-second {
+            font-size: 1rem;
+            margin-left: 3px;
+        }
+
+        .add-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        /**Box3**/
+        .nav-search {
+            display: flex;
+            justify-content: space-evenly;
+            width: 620px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: pink;
+            border-radius: 4px;
+        }
+
+        .search-select {
+            background-color: #f3f3f3;
+            width: 50px;
+            text-align: center;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border: none;
+        }
+
+        .search-input {
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .search-icon {
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            background-color: #febd68;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            color: #0f1111;
+        }
+
+        .nav-search:hover {
+            border: 2px solid orange;
+        }
+
+        .select-language {
+            font-size: 15px;
+            border: none;
+        }
+
+        /** box4 **/
+        span {
+            font-size: 0.7rem;
+        }
+
+        .nav-second {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /** box5 **/
+        .nav-cart i {
+            font-size: 30px;
+        }
+
+        .nav-cart {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /** panel **/
+        .panel {
+            height: 40px;
+            background-color: #222f3d;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .panel-option p {
+            display: inline;
+            margin-left: 15px;
+        }
+
+        .panel-option {
+            width: 70%;
+            font-size: 0.85rem;
+        }
+
+        .panel-deals {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        /** Hero section **/
+        .hero-section {
+            background-image: url(hero\ section\ Abhishe.jpeg);
+            background-size: cover;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /**
+    .hero-massage {
+        background-color: white;
+        color: black;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .hero-massage a{
+        color: #007185;
+    }
+        **/
+        /** shop section **/
+
+        .shop-section {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #eeeceb;
+        }
+
+        .box {
+            height: 360px;
+            width: 22.5%;
+            background-color: white;
+        }
+
+        .box-img {
+            background-image: url(box1A.jpg);
+            margin-top: 5px;
+            height: 260px;
+            width: 255px;
+            padding: 5px;
+            margin-left: 7px;
+            margin-bottom: 4px;
+        }
+
+        .box a {
+            bottom: 3px;
+            margin: 5px;
+        }
+
+        .box1-img {
+            background-image: url(box2.jpg);
+            margin-top: 0px;
+            height: 245px;
+            width: 255px;
+            padding: 5px;
+            margin-left: 7px;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .box2-img {
+            background-image: url(box3.jpg);
+            margin-top: 0px;
+            height: 220px;
+            width: 235px;
+            padding: 5px;
+            margin-left: 7px;
+            margin-bottom: 4px;
+        }
+
+        .box3-img {
+            background-image: url(box4.jpg);
+            margin-top: 0px;
+            height: 270px;
+            width: 255px;
+            padding: 5px;
+            margin-left: 7px;
+            margin-bottom: 4px;
+        }
+
+        .offer-section {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #eeeceb;
+            margin-top: 50px;
+        }
+
+        .box5-img {
+            background-image: url(box5.jpg);
+            margin-top: 0px;
+            height: 195px;
+            width: 298px;
+            padding: 5px;
+            margin-left: 7px;
+            margin-bottom: 4px;
+        }
+
+
+        #ancar {
+            margin-top: 70px;
+        }
+
+        .box6-img {
+            background-image: url(box6.jpg);
+            margin-top: 0px;
+            height: 225px;
+            width: 300px;
+            padding: 5px;
+            margin-left: 7px;
+            margin-bottom: 4px;
+        }
+
+        .box7-img {
+            background-image: url(box7.jpg);
+            margin-top: 20px;
+            height: 225px;
+            width: 310px;
+            padding: 5px;
+            margin-left: 7px;
+            margin-bottom: 4px;
+        }
+
+        .box8-img {
+            background-image: url(box8\,2.jpg);
+            margin-top: 20px;
+            height: 200px;
+            width: 250px;
+            padding: 5px;
+            margin-left: 30px;
+            margin-bottom: 4px;
+        }
+
+        .offer2-section {
+            height: 350px;
+            width: 1400px;
+            margin-left: 25px;
+            margin-top: 50px;
+        }
+
+        .offer2 {
+            display: flex;
+            margin-top: 10px;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h3 {
+            margin-right: 20px;
+            margin-left: 10px;
+            margin-bottom: 25px;
+        }
+
+        .outer-offer-section {
+            display: flex;
+            margin: 5px;
+            justify-content: space-evenly;
+        }
+
+        .off-img1 {
+            background-image: url(offer1.jpg);
+            height: 200px;
+            width: 200px;
+            margin: 5px;
+        }
+
+        .off-img2 {
+            background-image: url(offer2.jpg);
+            height: 200px;
+            width: 100px;
+            margin: 5px;
+        }
+
+        .off-img3 {
+            background-image: url(offer3.jpg);
+            height: 200px;
+            width: 100px;
+            margin: 5px;
+        }
+
+        .off-img4 {
+            background-image: url(offer5.jpg);
+            height: 200px;
+            width: 280px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .off-img5 {
+            background-image: url(offer6.jpg);
+            height: 200px;
+            width: 200px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .off-img6 {
+            background-image: url(offer7.jpg);
+            height: 200px;
+            width: 160px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off-img7 {
+            background-image: url(phone1.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off-img8 {
+            background-image: url(ph.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off-img9 {
+            background-image: url(phone3.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off-img10 {
+            background-image: url(phone4.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off-img11 {
+            background-image: url(phone5.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .box12-img {
+            background-image: url(gst1.jpg);
+            margin-top: 20px;
+            height: 250px;
+            width: 310px;
+            padding: 5px;
+            margin-left: 5px;
+            margin-bottom: 4px;
+        }
+
+        .box13-img {
+            background-image: url(gst2.jpg);
+            margin-top: 20px;
+            height: 250px;
+            width: 310px;
+            padding: 5px;
+            margin-left: 5px;
+            margin-bottom: 4px;
+        }
+
+        .box14-img {
+            background-image: url(gst3.jpg);
+            margin-top: 30px;
+            height: 225px;
+            width: 310px;
+            padding: 5px;
+            margin-left: 5px;
+            margin-bottom: 4px;
+        }
+
+        .box15-img {
+            background-image: url(gst4.jpg);
+            margin-top: 10px;
+            height: 230px;
+            width: 300px;
+            padding: 5px;
+            margin-left: 10px;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+
+        .off1-img {
+            background-image: url(watch1.jpg);
+            height: 190px;
+            width: 145px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off2-img {
+            background-image: url(watch2.jpg);
+            height: 190px;
+            width: 155px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off3-img {
+            background-image: url(watch3.jpg);
+            height: 190px;
+            width: 195px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off4-img {
+            background-image: url(watch4.jpg);
+            height: 190px;
+            width: 180px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off5-img {
+            background-image: url(watch5.jpg);
+            height: 190px;
+            width: 155px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off6-img {
+            background-image: url(watch6.jpg);
+            height: 190px;
+            width: 160px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off7-img {
+            background-image: url(mobile1.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off8-img {
+            background-image: url(mobile2.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off9-img {
+            background-image: url(mobile7.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off10-img {
+            background-image: url(mobile4.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off11-img {
+            background-image: url(mobile5.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .off12-img {
+            background-image: url(mobile6.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mid-div {
+            height: 250px;
+            width: 1000px;
+            align-items: center;
+            text-align: center;
+            margin-left: 250px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        .mid-logo {
+            background-image: url(jins3.jpg);
+            height: 160px;
+            width: 650px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #febd68;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .off-1img {
+            background-image: url(telivestion1.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .off-2img {
+            background-image: url(telivestion2.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .off-3img {
+            background-image: url(telivestion3.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .off-4img {
+            background-image: url(telivestion4.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .off-5img {
+            background-image: url(telivestion5.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .off-img {
+            background-image: url(telivestion6.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .off-7img {
+            background-image: url(telivestion7.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+
+        .of1f-img {
+            background-image: url(tv1.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .of2f-img {
+            background-image: url(tv2.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .of3f-img {
+            background-image: url(tv3.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .of4f-img {
+            background-image: url(tv4.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .of5f-img {
+            background-image: url(tv5.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .of6f-img {
+            background-image: url(tv6.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .of7f-img {
+            background-image: url(tv7.jpg);
+            height: 190px;
+            width: 190px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .off1er-section {
+            display: inline;
+            margin: 100px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+
+        .off1er-section h2 {
+            font-size: 1.5rem;
+            text-align: left;
+            margin-top: 10px;
+            margin-left: 25px;
+            cursor: pointer;
+        }
+
+        .second-last {
+            display: flex;
+            margin-top: 10px;
+            margin-left: 25px;
+            justify-content: space-evenly;
+            margin: 25px;
+            cursor: pointer;
+
+        }
+
+        .b1ox-img {
+            background-image: url(second1.jpg);
+            height: 150px;
+            width: 145px;
+            margin: 10px;
+            padding: 10px;
+            margin-top: 0%;
+            padding-top: 0;
+            cursor: pointer;
+        }
+
+        .b2ox-img {
+            background-image: url(second2.jpg);
+            height: 150px;
+            width: 145px;
+            margin: 10px;
+            padding: 10px;
+            margin-top: 10px;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+
+        .b3ox-img {
+            background-image: url(second3.jpg);
+            height: 150px;
+            width: 145px;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .b4ox-img {
+            background-image: url(second4.jpg);
+            height: 150px;
+            width: 145px;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .b5ox-img {
+            background-image: url(second5.jpg);
+            height: 150px;
+            width: 145px;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .b6ox-img {
+            background-image: url(second6.jpg);
+            height: 150px;
+            width: 145px;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .b7ox-img {
+            background-image: url(second7.jpg);
+            height: 150px;
+            width: 145px;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #second a {
+            font-size: 1rem;
+            cursor: pointer;
+
+        }
+
+        .sign-div {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 25px;
+            cursor: pointer;
+        }
+
+        #but {
+            border-radius: 15px;
+            background-color: yellow;
+            cursor: pointer;
+        }
+
+        .footer-div1 {
+            color: white;
+            font-size: 0.85rem;
+            background-color: #222f3d;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer-div2 {
+            color: white;
+            background-color: #223f3d;
+            font-size: 0.95rem;
+            justify-content: space-evenly;
+            text-align: left;
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            margin-top: 0.5px;
+        }
+
+        #unorder-list {
+            font-size: 0.85rem;
+            padding-left: 15px;
+            padding-top: 15px;
+        }
+
+        #an {
+            color: white;
+            font-size: 0.85rem;
+            justify-content: space-around;
+        }
+
+        h5 {
+            font-size: 1rem;
+        }
+
+        .footer-div3 {
+            height: 75px;
+            background-color: #223f3d;
+            color: white;
+            margin-top: 0.5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-div3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .footer-img {
+            background-image: url(logo.jpg);
+            background-size: cover;
+            height: 50px;
+            width: 5%;
+            margin-right: 25px;
+        }
+
+        .footer-div4 {
+            display: flex;
+            margin: 25px;
+            font-size: 0.86rem;
+        }
+
+        .footer-last-div {
+            background-color: #0f1111;
+            color: white;
+            font-size: 1rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .fot-div1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .fot-div1 p {
+            margin: 5px;
+        }
+
+        .fot-div2 {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .fot-div2 p {
+            margin: 5px;
+        }
+
+        #h5 {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo">
+
+                </div>
+            </div>
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">India</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="Search E-cart" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="language">
+                <div class="flag">
+                    <i class="fa-solid fa-flag-usa"></i>
+                    <select class="select-language">
+                        <option>English</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="nav-signin border">
+                <p><span>Hello,sign in</span></p>
+                <p class="nav-second">Account & Liss</p>
+            </div>
+
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+
+            <div class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                cart
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+
+            <div class="panel-option">
+                <p>Today's Deals</p>
+                <p>Customer Service</p>
+                <p>Registry</p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+            </div>
+
+            <div class="panel-deals">
+                Shop deals and Electronics
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-massage">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="shop-section">
+        <div class="box1 box">
+            <h2>Continue shopping deals</h2>
+            <div class="box-img"></div>
+            <p><a href="See more">See more deals</a></p>
+        </div>
+        <div class="box2 box">
+            <h2>Toys & Games recommendations for you</h2>
+            <div class="box1-img"></div>
+            <p><a href="See more">See more deals</a></p>
+        </div>
+        <div class="box3 box">
+            <h2>Shop by brand | Deals on top smartphones</h2>
+            <div class="box2-img"></div>
+            <p><a href="See more">See more deals</a></p>
+        </div>
+        <div class="box4 box">
+            <h2>Shop by new brand | Deals on top laptop</h2>
+            <div class="box3-img"></div>
+            <p><a href="See more">See More deals</a></p>
+        </div>
+    </div>
+    <div class="offer-section">
+        <div class="Box1 box">
+            <h2>Up to 35% off | Echo with Alexa and Fire TV</h2>
+            <div class="box5-img"></div>
+            <p id="ancar"><a href="See more">See more offre</a></p>
+        </div>
+        <div class="Box2 box">
+            <h2>Wholesale pricing + 10% Assured cashback</h2>
+            <div class="box6-img"></div>
+            <p><a href="See more">See more offer</a></p>
+        </div>
